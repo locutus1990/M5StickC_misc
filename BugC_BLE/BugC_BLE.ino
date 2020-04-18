@@ -191,8 +191,10 @@ void setup()
 	Blynk.setDeviceName("Blynk");
 
 	M5.Lcd.setRotation(0);
+	M5.Lcd.setSwapBytes(false);
 
 	gTftSprite.createSprite(80, 160);
+	gTftSprite.setSwapBytes(true);
 	gTftSprite.setTextSize(1);
 	gTftSprite.setCursor(5,30);
 	gTftSprite.fillSprite(TFT_GREEN);
