@@ -50,7 +50,7 @@ void setup(void)
 	M5.Lcd.setSwapBytes(false);
 
 	gTftSprite.createSprite(img_width, img_height);
-	gTftSprite.setSwapBytes(true);
+	gTftSprite.setSwapBytes(false);
 
 	gTftSprite.setTextSize(2);
 	gTftSprite.setTextColor(TFT_BLACK);

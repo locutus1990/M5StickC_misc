@@ -88,11 +88,7 @@ def writeBinary(fout, img):
         for i in range(ww):
             rgb = img[j][i]
             val = rgb2hex(rgb)
-            vv = format(val, "04x")
-            bytes_be = bytes.fromhex( vv )
-            bytes_le = bytes_be[::-1]
-            hex_le = bytes_le.hex();
-            fout.write( "0x"+hex_le+"," )
+            fout.write( hex(val)+"," );
             cnt = cnt+1
             if(7<cnt):
                 fout.write( "\n" )
